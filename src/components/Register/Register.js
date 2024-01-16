@@ -49,7 +49,7 @@ const Register = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:3000/auth/register', {
+            const response = await axios.post('http://chat2tbe.tnydevdocs.io.vn:3000/auth/register', {
                 email: email,
                 hashPassword: password,
                 userName: name,
@@ -75,7 +75,7 @@ const Register = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:3000/auth/verify', {
+            const response = await axios.post('http://chat2tbe.tnydevdocs.io.vn:3000/auth/verify', {
                 email: email,
                 verifycode: verificationCode,
             });

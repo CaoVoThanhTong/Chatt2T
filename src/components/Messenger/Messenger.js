@@ -25,7 +25,7 @@ function Messenger() {
     useEffect(() => {
         if (token) {
             axios
-                .get('http://localhost:3000/user', {
+                .get('http://chat2tbe.tnydevdocs.io.vn:3000/user', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -40,7 +40,7 @@ function Messenger() {
 
     useEffect(() => {
         if (token) {
-            const socket = io.connect('http://localhost:3000', {
+            const socket = io.connect('http://chat2tbe.tnydevdocs.io.vn:3000/', {
                 extraHeaders: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -92,7 +92,7 @@ function Messenger() {
 
         if (socket && selectedUser && message.trim() !== '') {
             try {
-                const meResponse = await fetch('http://localhost:3000/user/me', {
+                const meResponse = await fetch('http://chat2tbe.tnydevdocs.io.vn:3000/user/me', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -141,7 +141,7 @@ function Messenger() {
 
     const handleUserClick = async (selectedUserID) => {
         try {
-            const response = await fetch(`http://localhost:3000/user/me`, {
+            const response = await fetch(`http://chat2tbe.tnydevdocs.io.vn:3000/user/me`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

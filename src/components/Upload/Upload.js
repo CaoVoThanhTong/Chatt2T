@@ -47,7 +47,7 @@ const Upload = () => {
             };
 
             axios.post(
-                'http://localhost:3000/article/',
+                'http://chat2tbe.tnydevdocs.io.vn:3000/article/',
                 postData,
                 {
                     headers: {
@@ -72,7 +72,7 @@ const Upload = () => {
     useEffect(() => {
         const token = localStorage.getItem('token');
         if (token) {
-            axios.get('http://localhost:3000/user/me', {
+            axios.get('http://chat2tbe.tnydevdocs.io.vn:3000/user/me', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

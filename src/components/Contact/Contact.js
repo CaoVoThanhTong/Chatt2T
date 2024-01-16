@@ -27,7 +27,7 @@ const Contact = () => {
     };
 
     useEffect(() => {
-        const apiUrl = 'http://localhost:3000/user';
+        const apiUrl = 'http://chat2tbe.tnydevdocs.io.vn:3000/user';
 
         const token = localStorage.getItem('token');
         const config = {
@@ -49,7 +49,7 @@ const Contact = () => {
 
     useEffect(() => {
         if (hoveredUserId && isHovered) {
-            const apiUrl = `http://localhost:3000/user/${hoveredUserId}`; // Đổi thành URL API cụ thể
+            const apiUrl = `http://chat2tbe.tnydevdocs.io.vn:3000/user/${hoveredUserId}`; // Đổi thành URL API cụ thể
 
             const token = localStorage.getItem('token');
             const config = {

@@ -44,7 +44,7 @@ const Login = ({ setAuthenticated }) => {
 
     const handleGoogleLogin = async () => {
         axios
-            .get('http://localhost:3000/auth/google/login', {
+            .get('http://chat2tbe.tnydevdocs.io.vn:3000/auth/google/login', {
                 withCredentials: true,
             })
             .then((response) => {
@@ -63,7 +63,7 @@ const Login = ({ setAuthenticated }) => {
         }
 
         try {
-            const response = await axios.post('http://localhost:3000/auth/login', {
+            const response = await axios.post('http://chat2tbe.tnydevdocs.io.vn:3000/auth/login', {
                 email: email,
                 hashPassword: password,
             });
@@ -99,7 +99,7 @@ const Login = ({ setAuthenticated }) => {
 
             if (refreshToken) {
                 const response = await axios.post(
-                    'http://localhost:3000/auth/refresh',
+                    'http://chat2tbe.tnydevdocs.io.vn:3000/auth/refresh',
                     {},
                     {
                         headers: {

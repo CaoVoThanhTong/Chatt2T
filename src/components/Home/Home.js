@@ -20,7 +20,7 @@ const Home = ({ searchResults }) => {
         const token = localStorage.getItem('token');
         if (token) {
             axios
-                .get('http://localhost:3000/article/all', {
+                .get('http://chat2tbe.tnydevdocs.io.vn:3000/article/all', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -30,7 +30,7 @@ const Home = ({ searchResults }) => {
                     const userIds = [...new Set(response.data.map((post) => post.userId))];
                     userIds.forEach((userId) => {
                         axios
-                            .get(`http://localhost:3000/user/${userId}`, {
+                            .get(`http://chat2tbe.tnydevdocs.io.vn:3000/user/${userId}`, {
                                 headers: {
                                     Authorization: `Bearer ${token}`,
                                 },

@@ -22,7 +22,7 @@ const Header = ({setSearchResults}) => {
 
         if (token) {
             axios
-                .get('http://localhost:3000/user/me', {
+                .get('http://chat2tbe.tnydevdocs.io.vn:3000/user/me', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -48,7 +48,7 @@ const Header = ({setSearchResults}) => {
         const token = localStorage.getItem('token');
         if (token) {
             axios
-                .get(`http://localhost:3000/article/all`, {
+                .get(`http://chat2tbe.tnydevdocs.io.vn:3000/article/all`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

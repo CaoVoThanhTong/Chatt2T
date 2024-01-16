@@ -88,7 +88,7 @@ function Profile() {
 
         if (token) {
             axios
-                .get('http://localhost:3000/user/me', {
+                .get('http://chat2tbe.tnydevdocs.io.vn:3000/user/me', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -120,7 +120,7 @@ function Profile() {
         if (token) {
             axios
                 .patch(
-                    'http://localhost:3000/user/',
+                    'http://chat2tbe.tnydevdocs.io.vn:3000/user/',
                     {
                         userName: name,
                         bio: bio,
